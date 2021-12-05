@@ -87,6 +87,9 @@ function initPage() {
                             var weatherTemp = document.createElement("p");
                             weatherTemp.innerHTML = "Temp: " + kelvinToFahrenheit(response.data.list[castIndex].main.temp) + " &#176F";
                             forecastLists[i].append(weatherTemp);
+                            var weatherWind = document.createElement("p");
+                            weatherWind.innerHTML = "Wind Speed: " + response.data.list[castIndex].wind.speed + "MPH";
+                            forecastLists[i].append(weatherWind);
                             var weatherHumidity = document.createElement("p");
                             weatherHumidity.innerHTML = "Humidity: " + response.data.list[castIndex].main.humidity + "%";
                             forecastLists[i].append(weatherHumidity);
@@ -118,10 +121,10 @@ function initPage() {
     function displaySearchHistory() {
         recentHistory.innerHTML = "";
         for (var i = 0; i < searchHistory.length; i++) {
-            var historyItem = document.createElement("input");
+            const historyItem = document.createElement("input");
             historyItem.setAttribute("type", "text");
             historyItem.setAttribute("readonly", true);
-            historyItem.setAttribute("class", "form-control d-block bg-white");
+            historyItem.setAttribute("class", "form-control d-block bg-secondary text-white text-center");
             historyItem.setAttribute("value", searchHistory[i]);
             historyItem.addEventListener("click", function () {
                 getWeather(historyItem.value);

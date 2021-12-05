@@ -23,21 +23,27 @@
     <main class="container-fluid">
         <div class="row">
             <div class="col-lg-3 bg-white">
-                <h5 class="mt-1">Search for a City:</h5>
+                <h2 class="mt-1">Search for a City:</h2>
                 <div class="input-group mb-3">
                     <input id="city-input" type="text" class="form-control" placeholder="Enter a city">
                     <div class="input-group-append">
-                        <button class="btn btn-primary" type="button" id="search-btn">
-                            <i class="fas fa-search"></i> <!---->
-                        </button>
                     </div>
                 </div>
-                <button class="btn btn-primary mb-3" type="button" id="clear-storage">Clear history</button>
-                <form id="recent-history"></form>
+                <div>
+                    <div>
+                <button class="col-12 btn btn-primary mb-3 btn-lg" type="button" id="search-btn">
+                    Search
+                </button>
+                <button class="col-12 btn-lg btn btn-primary mb-3" type="button" id="clear-storage">Clear History</button>
+                </div>
+                <div class="border-top border-secondary pt-3">
+                <form id="recent-history" class="section-border"></form>
+                </div>
+                </div>
             </div>
             <div class="col-lg-9">
                 <div class="row mr-0">
-                    <div class="col-lg-11 card m-3 d-none" id="todays-weather">
+                    <div class="col-lg-11 card m-3 d-none border border-secondary" id="todays-weather">
                         <div class="card-body">
                             <h3 id="city-name" class="city-name align-middle"></h3>
                             <img id="current-weather-photo" alt="">
@@ -50,7 +56,7 @@
                 </div>
                 <div class="row d-none" id="five-day">
                     <div class="col-12">
-                        <h3>5-Day Forecast</h3>
+                        <h4>5-Day Forecast</h4>
                     </div>
                 </div>
                 <div class="row">
