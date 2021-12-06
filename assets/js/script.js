@@ -111,7 +111,7 @@ function initPage() {
 
                             //5 day wind speed
                             var weatherWind = document.createElement("p");
-                            weatherWind.innerHTML = "Wind Speed: " + response.data.list[castIndex].wind.speed + "MPH";
+                            weatherWind.innerHTML = "Wind Speed: " + response.data.list[castIndex].wind.speed + " MPH";
                             forecastLists[i].append(weatherWind);
 
                             // 5 day humidity
